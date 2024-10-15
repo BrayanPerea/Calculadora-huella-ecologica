@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Huella Ecológica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="titulo-contenedor">
+        <h1>Calculadora de Huella Ecológica</h1>
+        <img src="Imagenes/huella.jpg" alt="Calculadora de Huella Ecológica" class="titulo-imagen">
+    </div>
+    <!-- Módulo 1: Alimentos -->
+    <div id="modulo-alimentos">
+        <h2>Alimentos</h2>
+        <img src="Imagenes/impacto-ambientas-dieta-vegetariana.jpg" alt="Alimentos" class="modulo-imagen">
+        <label for="consumo-carne">¿Cuántas veces consumes carne a la semana?</label>
+        <input type="number" id="consumo-carne" min="0" max="21">
+        
+        <label for="consumo-vegetales">¿Cuántas veces consumes vegetales a la semana?</label>
+        <input type="number" id="consumo-vegetales" min="0" max="21">
+    </div>
+
+    <!-- Módulo 2: Alojamiento -->
+    <div id="modulo-alojamiento">
+        <h2>Alojamiento</h2>
+        <img src="Imagenes/hoteles.jpg" alt="Alojamiento" class="modulo-imagen">
+        <label for="tamano-casa">Tamaño de tu casa</label>
+        <select id="tamano-casa">
+            <option value="pequena">Pequeña</option>
+            <option value="mediana">Mediana</option>
+            <option value="grande">Grande</option>
+        </select>
+
+        <label for="energia-renovable">¿Usas energía renovable?</label>
+        <select id="energia-renovable">
+            <option value="si">Sí</option>
+            <option value="no">No</option>
+        </select>
+    </div>
+
+    <!-- Módulo 3: Movilidad -->
+    <div id="modulo-movilidad">
+        <h2>Movilidad</h2>
+        <img src="Imagenes/movilidad.jpg" alt="Movilidad" class="modulo-imagen">
+        <label for="transporte-publico">¿Cuántas veces usas transporte público a la semana?</label>
+        <input type="number" id="transporte-publico" min="0" max="21">
+        
+        <label for="kilometros-auto">¿Cuántos kilómetros manejas por semana?</label>
+        <input type="number" id="kilometros-auto" min="0">
+    </div>
+
+    <button id="calcular" onclick="calcularHuella()">Calcular Huella Ecológica</button>
+
+    <!-- Sección de Resultados -->
+    <div id="resultados">
+        <h2>Resultados</h2>
+        <p id="resultado-huella"></p>
+    </div>
+    <div id="resultados">
+        <p id="resultado-huella"></p>
+        <div id="tabla-evaluacion"></div> 
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
